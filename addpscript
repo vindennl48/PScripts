@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# First argument is github username
+# Second argument is github repository name
+# Third argument is the name of the py file to create the link for
+
+# Previous Working directory
+PREVDIR=$PWD
+
+cd ~/.pscripts/repositories
+
+echo "----> Cloning Repo Into .pscripts/repositories"
+git clone https://github.com/$1/$2
+
+echo "----> Creating Symbolic Link"
+ln -s ~/.pscripts/repositories/$2/$3 ~/.pscripts/$3
+
+echo "----> Finished Installing Script"
+cd $PREVDIR
+
+

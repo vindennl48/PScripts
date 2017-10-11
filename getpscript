@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This script will copy the sym link you want into the working directory
+#  of the python file you are creating.
+
+# The First argument is the python file you wish to copy
+
+if [ -f $1 ]; then
+  cp ~/.pscripts/$1 .
+else
+  echo "That Python script is not installed!"
+fi
+
+
+
