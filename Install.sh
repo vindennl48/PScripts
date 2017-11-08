@@ -42,7 +42,7 @@ run_installer() {
 
   # copy getpscript bash script to .pscripts folder
   if [ ! -f ~/.pscripts/getpscript ]; then
-    cp $PWD/addpscript ~/.pscripts/getpscript
+    cp $PWD/getpscript ~/.pscripts/getpscript
     chmod a+x ~/.pscripts/getpscript
     echo "----> Copied getpscript script to .pscripts folder"
   else
@@ -51,11 +51,20 @@ run_installer() {
 
   # copy updatepscript bash script to .pscripts folder
   if [ ! -f ~/.pscripts/updatepscript ]; then
-    cp $PWD/addpscript ~/.pscripts/updatepscript
+    cp $PWD/updatepscript ~/.pscripts/updatepscript
     chmod a+x ~/.pscripts/updatepscript
     echo "----> Copied updatepscript script to .pscripts folder"
   else
     echo "##### Already copied updatepscript to .pscripts folder"
+  fi
+
+  # copy seepscript bash script to .pscripts folder
+  if [ ! -f ~/.pscripts/seepscript ]; then
+    cp $PWD/seepscript ~/.pscripts/seepscript
+    chmod a+x ~/.pscripts/seepscript
+    echo "----> Copied seepscript script to .pscripts folder"
+  else
+    echo "##### Already copied seepscript to .pscripts folder"
   fi
 
 }
