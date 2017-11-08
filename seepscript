@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# This script will take you to the .pscripts directory
-
-cd ~/.pscripts/
-
-

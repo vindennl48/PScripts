@@ -58,15 +58,6 @@ run_installer() {
     echo "##### Already copied updatepscript to .pscripts folder"
   fi
 
-  # copy seepscript bash script to .pscripts folder
-  if [ ! -f ~/.pscripts/seepscript ]; then
-    cp $PWD/seepscript ~/.pscripts/seepscript
-    chmod a+x ~/.pscripts/seepscript
-    echo "----> Copied seepscript script to .pscripts folder"
-  else
-    echo "##### Already copied seepscript to .pscripts folder"
-  fi
-
 }
 
 
