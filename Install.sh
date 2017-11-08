@@ -49,6 +49,15 @@ run_installer() {
     echo "##### Already copied getpscript to .pscripts folder"
   fi
 
+  # copy updatepscript bash script to .pscripts folder
+  if [ ! -f ~/.pscripts/updatepscript ]; then
+    cp $PWD/addpscript ~/.pscripts/updatepscript
+    chmod a+x ~/.pscripts/updatepscript
+    echo "----> Copied updatepscript script to .pscripts folder"
+  else
+    echo "##### Already copied updatepscript to .pscripts folder"
+  fi
+
 }
 
 
