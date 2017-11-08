@@ -5,10 +5,11 @@
 
 # The First argument is the python file you wish to copy
 
-if [ -f $1 ]; then
-  cp ~/.pscripts/$1 .
+if [ -f ~/.pscripts/$1 ]; then
+  cp -d ~/.pscripts/$1 .
+  echo "----> Successfully copied link into destination!"
 else
-  echo "That Python script is not installed!"
+  echo "##### That Python script is not installed!"
 fi
 
 
