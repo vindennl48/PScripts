@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# First argument is github repository name
+
+# Previous Working directory
+PREVDIR=$PWD
+
+cd ~/.pscripts/repositories/$1
+
+echo "----> Updating Repository"
+git pull origin master
+
+echo "----> Finished Updating Repository!"
+cd $PREVDIR
+
+
